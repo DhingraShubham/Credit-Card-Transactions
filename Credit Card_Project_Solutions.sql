@@ -61,8 +61,8 @@ where cb.card_number is null;
 select distinct cust_id as Customers
 from customer_base csb 
 where csb.cust_id not in (select distinct cb.cust_id
-						  from Transaction_base tb
-						  join Card_base cb	on tb.credit_card_id = cb.card_number);
+			  from Transaction_base tb
+			  join Card_base cb on tb.credit_card_id = cb.card_number);
 
 
 -- 7) What is the highest and lowest credit limit given to each card type.
